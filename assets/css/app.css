@@ -227,7 +227,7 @@ h6 {
     align-items: stretch;
     will-change: transform;
     transition: all 0.2s linear;
-    transform: translateX(100%);
+    transform: translateX(110%);
   }
   .menu.is-show {
     transform: translateX(0);
@@ -249,7 +249,7 @@ h6 {
   .menu-close {
     display: flex;
     justify-content: flex-end;
-    padding: 10px 30px 10px 0;
+    padding: 10px 10px 10px 0;
   }
   .menu__close {
     padding: 10px;
@@ -689,7 +689,7 @@ h6 {
   .customer__item {
     width: 100%;
     min-width: 320px;
-    margin: 0;
+    margin: 0 5px;
   }
 }
 .subscribe__container {
@@ -782,6 +782,9 @@ h6 {
   }
 }
 @media screen and (max-width: 767px) {
+  .footer {
+    overflow: hidden;
+  }
   .footer__container {
     grid-template-columns: 50% 50%;
     grid-gap: 30px;
