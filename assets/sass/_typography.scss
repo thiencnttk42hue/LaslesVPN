@@ -1,0 +1,37 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $heading-color;
+  font-weight: bold;
+}
+.heading {
+  font-size: 35px;
+  font-weight: 500;
+  line-height: calc(50 / 35);
+  margin-bottom: 20px;
+}
+.text {
+  line-height: calc(30 / 16);
+}
+.text-medium {
+  font-weight: 500;
+}
+.text-clamp {
+  display: block;
+  display: -webkit-box;
+  height: 90px;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text-clamp-3 {
+  -webkit-line-clamp: 3;
+}
+@media screen and (max-width: 767px) {
+  .heading {
+    font-size: 30px;
+  }
+}

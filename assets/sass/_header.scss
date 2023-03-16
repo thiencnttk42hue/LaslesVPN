@@ -1,0 +1,32 @@
+.header {
+  padding: 50px 0 90px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__auth {
+    display: flex;
+    align-items: center;
+    gap: 0 30px;
+    text-transform: capitalize;
+  }
+  &__signin {
+    color: $heading-color;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .header {
+    padding: 25px 0 50px;
+  }
+  .header__auth {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__auth {
+    gap: 0 15px;
+  }
+}

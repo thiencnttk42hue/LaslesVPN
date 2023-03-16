@@ -1,0 +1,142 @@
+.customer {
+  .boxed {
+    margin-bottom: 60px;
+  }
+  .heading {
+    max-width: 448px;
+    margin: 0 auto 20px;
+  }
+
+  &__item {
+    background: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 0 25px;
+
+    &.slick-current.slick-active {
+      border-color: $primary-color;
+    }
+    &.slick-slide {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+  }
+  &__avatar {
+    width: 50px;
+    height: 50px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 100rem;
+    }
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: calc(30 / 18);
+    margin-bottom: 5px;
+  }
+  &__address {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: calc(30 / 14);
+  }
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 10px;
+  }
+  
+  // slick slides
+
+  .slick-track {
+    display: flex;
+    padding-bottom: 60px;
+  }
+  .slick-prev,
+  .slick-next {
+    width: 60px;
+    height: 60px;
+    border-radius: 100rem;
+    background-color: #fff;
+    border: 2px solid $primary-color;
+    transform: translateY(50%);
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    i {
+      font-size: 18px;
+      color: $primary-color;
+    }
+  }
+  .slick-prev {
+    right: 80px;
+  }
+  .slick-next {
+    right: 0;
+  }
+  .slick-prev:hover,
+  .slick-next:hover {
+    background-color: $primary-color;
+    i {
+      color: #fff;
+    }
+  }
+  .slick-dots {
+    display: flex;
+    align-items: center;
+    gap: 0 15px;
+    transform: translateY(40%);
+    button {
+      font-size: 0;
+      background-color: $gray-color;
+      width: 15px;
+      height: 15px;
+      border-radius: 100rem;
+      border: none;
+      transition: all 0.3s linear;
+    }
+  }
+  .slick-active button {
+    background-color: $primary-color;
+    width: 45px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .customer {
+    .slick-track {
+      padding-bottom: 20px;
+    }
+    .slick-dots {
+      justify-content: center;
+    }
+  }
+  .customer__list {
+    padding-bottom: 60px;
+  }
+  .customer__item {
+    margin: 0 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .customer__item {
+    width: 100%;
+    min-width: 320px;
+    margin: 0;
+  }
+}

@@ -1,0 +1,18 @@
+.network {
+  &__heading {
+    max-width: 383px;
+    margin: 0 auto 20px;
+  }
+
+  &__img {
+    margin-top: 156px;
+    img {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .network__img {
+    margin-top: 50px;
+  }
+}

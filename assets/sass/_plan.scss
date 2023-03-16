@@ -1,0 +1,116 @@
+.plan {
+  padding: 80px 0 35px;
+  background: linear-gradient(
+    180deg,
+    #f8f8f8 -45.04%,
+    rgba(248, 248, 248, 0) 88.56%
+  );
+  &__list {
+    padding-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0 50px;
+    margin-bottom: 150px;
+  }
+  &__item {
+    background: #ffffff;
+    border: 2px solid #dddddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 50px 50px;
+    &:hover {
+      border-color: $primary-color;
+    }
+  }
+  &__img {
+    margin-bottom: 30px;
+  }
+  &__details {
+    margin-bottom: 50px;
+  }
+  &__title {
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: calc(30 / 18);
+  }
+  &__info {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+    line-height: calc(30 / 14);
+  }
+  &__price {
+    margin-top: auto;
+    font-size: 25px;
+    line-height: calc(30 / 25);
+    margin-bottom: 20px;
+    span {
+      font-weight: 400;
+      color: #4f5665;
+    }
+  }
+  &__btn {
+    width: 100%;
+    &:hover {
+      background-color: $primary-color;
+      color: #fff;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 90%;
+        height: 100%;
+        transform: translate(-50%, 50%);
+        background: rgba(245, 56, 56, 0.35);
+        filter: blur(27px);
+        border-radius: 10px;
+        z-index: -1;
+        border-color: inherit;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .plan {
+    padding-top: 50px;
+  }
+  .plan__list {
+    display: grid;
+    justify-content: flex-start;
+    grid-auto-columns: 320px;
+    grid-auto-flow: column;
+    grid-gap: 1.5rem;
+    overflow: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding: 1rem;
+    grid-template-columns: unset;
+    margin-bottom: 50px;
+  }
+  .plan__list::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+  .plan__list > * {
+    scroll-snap-align: start;
+  }
+}
+@media screen and (max-width: 767px) {
+  .plan__item {
+    padding: 40px 50px 20px;
+  }
+  .plan__details {
+    margin-bottom: 30px;
+  }
+}
